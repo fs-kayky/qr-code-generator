@@ -1,27 +1,19 @@
 import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
-import { Component, inject} from '@angular/core';
-import { ISigninResponse } from '../../interfaces/ISignin';
-import { UsersService } from '../../services/users/users.service';
+import { Component} from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { HeaderComponent } from '../../components/header/header.component';
-import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardModule, ButtonModule, CommonModule, HeaderComponent],
+  imports: [CardModule, ButtonModule, CommonModule, InputTextModule, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent{
-  usersService = inject(UsersService);
 
-  userData!: ISigninResponse | null;
+  url: string | undefined
 
-  ngOnInit() {
-      this.usersService.userInformations.subscribe((data) => {
-        this.userData = data;
-      })
-  }
 }

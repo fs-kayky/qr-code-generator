@@ -1,11 +1,54 @@
-<div class="all-container">
-  <app-header>
-  </app-header>
-  <div class="home-page">
-      <div>
-          <h2>Seja bem-vindo(a),</h2>
-          <h1>Teste Testando</h1>
-          <!-- <h1>{{userData?.user?.name}} {{userData?.user?.lastName}}</h1> -->
-      </div>
+<div class="whole_page">
+
+  <div class="page_title">
+
+    <div class="logo">
+    </div>
+
   </div>
+
+
+  <div class="card">
+
+    <div class="content_container">
+
+
+      <div class="inputs_container">
+
+        <div class="url_field">
+
+          <div class="title">
+
+            <span class="pi pi-link"></span>
+            <h3>INSIRA SUA URL AQUI:</h3>
+
+          </div>
+
+          <input pInputText [(ngModel)]="url" type="text" pSize="large"
+            placeholder="exemplo (https://www.google.com)" />
+
+        </div>
+
+        <div class="color_field">
+
+          <div class="title">
+
+            <span class="pi pi-palette"></span>
+            <h3>COR</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="result_container">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
 </div>
